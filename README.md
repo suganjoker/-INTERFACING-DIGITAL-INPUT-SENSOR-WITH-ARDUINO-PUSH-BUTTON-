@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE :15/02/2024
+## NAME :sugavarathan.l																			             
+## ROLLNUMBER :212221220051
+## DEPARTMENT :information technology
 
 
 ## AIM:
@@ -38,7 +38,7 @@ Clock Speed	16 MHz
 FIGURE-01
 ![image](https://user-images.githubusercontent.com/36288975/163530431-4d390e98-0942-42d8-95b8-f57d348e6ad8.png)
 
-FIGURE-02
+
 ## PROCEDURE 
  Open tinker cad account 
 1.	Select Arduino uno , bread board , digital input and digital output 
@@ -52,19 +52,47 @@ FIGURE-02
 ## CIRCUIT DIAGRAM 
 
 
-![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
+
+![Screenshot 2024-02-15 110446](https://github.com/suganjoker/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/105915942/56c91dd3-405d-4024-a6aa-badcedb0c9f0)
 
 
 
-FIGURE -03
 
+![Screenshot 2024-02-15 110601](https://github.com/suganjoker/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/105915942/0b4a5bd2-95c3-4dd2-9470-46d968512cdb)
 
 
 
 ## PROGRAM 
  
  
+int led=4;
+int pushbutton=3;
 
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pushbutton, INPUT);
+}
+
+void loop()
+{
+  int pb;
+  pb= digitalRead(pushbutton);
+  if(pb==HIGH)
+{
+
+
+  digitalWrite(led, HIGH);
+  delay(500); // Wait for 500 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(500); // Wait for 500 millisecond(s)
+}
+else
+{
+  digitalWrite(led, LOW);
+  delay(500); // Wait for 500 millisecond(s)
+}
+}
 
 
 
@@ -80,6 +108,7 @@ FIGURE -03
 
 
 ## OUTPUT OF SIMULATION :
+![Screenshot 2024-02-15 110446](https://github.com/suganjoker/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/105915942/c8fac398-387d-4b2c-bacb-8c9bb4dae273)
 
-[My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2024-02-15 110601](https://github.com/suganjoker/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/105915942/0b4a5bd2-95c3-4dd2-9470-46d968512cdb)
 
